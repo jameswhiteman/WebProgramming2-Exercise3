@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:jl="http://xmlns.jcp.org/composite/jsflive"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<h:outputStylesheet name="Common.css" library="css" />
+</h:head>
+
+<h:body>
+
+	<ui:composition template="/resources/pages/templates/template_main.xhtml">
+
+	<ui:define name="content">
+
+	<!-- Summary Output  -->
+		<h:form>
+		<h:dataTable styleClass="dataTableListings" value="#{beanListings.listings}" var="summaries" binding="#{beanListings.datatableListings}">
+			<h:column>
+				<f:facet name="title">Title</f:facet>
+				<h:commandLink styleClass="linkListing" value="#{summaries.title}" action="#{beanListings.goToListing()}" />
+			</h:column>
+			<h:column>
+				<f:facet name="phone">Phone</f:facet>
+				<h:outputLabel styleClass="labelPhone">#{summaries.phone}</h:outputLabel>
+			</h:column>
+		</h:dataTable>
+		</h:form>
+		
+	</ui:define>
+
+	</ui:composition>
+
+</h:body>
+
+</html>

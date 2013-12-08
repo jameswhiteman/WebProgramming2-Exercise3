@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:jl="http://xmlns.jcp.org/composite/jsflive"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<h:outputStylesheet name="Common.css" library="css" />
+</h:head>
+
+<h:body>
+
+	<ui:composition template="/resources/pages/templates/template_main.xhtml">
+
+	<ui:define name="content">
+	
+	<!-- Welcome Message -->
+	<h:outputLabel styleClass="labelTitle">Welcome!</h:outputLabel>
+	<br/>
+
+	<!-- Links -->
+	<h:outputLink styleClass="linkPage" value="/exercise3/submission.xhtml">Listing Submission</h:outputLink>
+	<br/>
+	<h:outputLink styleClass="linkPage" value="/exercise3/summary.xhtml">Listings Summary</h:outputLink>
+
+	</ui:define>
+
+	</ui:composition>
+
+</h:body>
+
+</html>
